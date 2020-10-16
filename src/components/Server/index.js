@@ -1,5 +1,6 @@
 //Dependencias
 import React from 'react';
+import axios from 'axios';
 
 
 class MyComponent extends React.Component {
@@ -14,35 +15,21 @@ class MyComponent extends React.Component {
 
 
     componentDidMount() {
-        fetch("http://localhost:8080/action",
-            {
-                mode: 'cors',
-                headers: {
-                    "Access-Control-Allow-Origin" : "*",
-                    'Content-Type': 'application/json'
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-            })
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    console.log(result);
-                    this.setState({
-                        isLoaded: true,
-                        items: result.items
-                    });
-                },
-                // Nota: es importante manejar errores aquí y no en 
-                // un bloque catch() para que no interceptemos errores
-                // de errores reales en los componentes.
+        axios.get('http://localhost:7002/Usuarios')
+            .then(res => res)
+            .then((result) => {
+                this.setState({
+                    isLoaded: true,
+                    items: result.data
+                });
+            },
                 (error) => {
                     console.log(error);
                     this.setState({
                         isLoaded: true,
                         error
                     });
-                }
-            )
+                });
     }
 
     render() {
@@ -55,8 +42,8 @@ class MyComponent extends React.Component {
             return (
                 <ul>
                     {items.map(item => (
-                        <li key={item.name}>
-                            {item.name} {item.price}
+                        <li key={item.id}>
+                            {item.primerNombre} {item.primerApellido}
                         </li>
                     ))}
                 </ul>

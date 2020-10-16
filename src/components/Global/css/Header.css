@@ -1,21 +1,36 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
+.Logo img {
+  height: 14vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .Logo img {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.Menu{
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+}
+
+.Menu li{
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.Menu li a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.Menu li a :hover {
+  color: #EEE;
+}
+
+.Header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

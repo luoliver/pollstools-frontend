@@ -1,0 +1,15 @@
+.img-registro{
+    width: 75px;
+    border-radius: 50%;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.titulo > span{
+    text-decoration: solid;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}

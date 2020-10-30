@@ -4,14 +4,15 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 //Routes
-import AppRoutes from './routes';
+import AppRoutes from './components/routes';
 
 //Assets
-import './index.css';
+import '../src/assets/css/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 render(
-    <Router>
-      <AppRoutes />
-    </Router>,
+  <Router>
+    <AppRoutes />
+  </Router>,
   document.getElementById('root')
 );

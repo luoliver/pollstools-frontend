@@ -15,7 +15,7 @@ class MyComponent extends React.Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:7002/Usuarios')
+        axios.get('http://localhost:7002/usuarios')
             .then(res => res)
             .then((result) => {
                 this.setState({

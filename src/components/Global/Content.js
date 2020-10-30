@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 //Assets
-import './css/Content.css';
+import '../../assets/css/Content.css';
+import { Container } from 'react-bootstrap';
 
 class Content extends Component {
   static propTypes = {
@@ -14,9 +15,9 @@ class Content extends Component {
     const { body } = this.props;
 
     return(
-      <div className="Content">
+      <Container className="Content">
         {body}
-      </div>
+      </Container>
     )
   }  
 }

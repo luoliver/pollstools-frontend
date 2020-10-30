@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 //Assets
-import './css/Footer.css';
+import '../../assets/css/Footer.css';
 
 class Footer extends React.Component {
   static propTypes = {
